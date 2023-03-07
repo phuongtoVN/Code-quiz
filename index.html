@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="Assets/style.css" />
   </head>
   <body>
+    <t class = "time">Time : 0</t>
+
     <div class="first-page">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
@@ -16,6 +18,7 @@
     
     <div class="quiz" style="display:none;">
         <question style="display:none;">
+            
             <h1>Commonly used data types DO NOT include:</h1>
             <ol>
                 <li class = "button button-answer" data-state = "wrong">1.Strings</li>
@@ -25,6 +28,7 @@
             </ol>
         </question>
         <question style="display:none;">
+           
             <h1>The condition in an if/else statement is enclosed within ____.</h1>
             <ol>
                 <li class = "button button-answer" data-state = "wrong">1.Quote</li>
@@ -34,7 +38,8 @@
             </ol>
         </question>
         <question style="display:none;">
-            <h1>arrays in JaveScript can be used to store ____.</h1>
+            
+            <h1>Arrays in JaveScript can be used to store ____.</h1>
             <ol>
                 <li class = "button button-answer" data-state = "wrong">1.Numbers and strings</li>
                 <li class = "button button-answer" data-state = "wrong">2.Other arrays</li>
@@ -43,6 +48,7 @@
             </ol>
         </question>
         <question style="display:none;">
+            
             <h1>A very useful tool used during development and debuging for printing content to the debugger is:</h1>
             <ol>
                 <li class = "button button-answer" data-state = "wrong">1.JavaScript</li>
@@ -53,11 +59,17 @@
         </question>
         <question style="display:none;">
             <h1>All done!</h1>
-            <p style="text-align: left; margin-left: 30%;"> Your final score is </p>
-            <p style="text-align: left; margin-left: 30%;"> Enter initial: <input id="name"/></p>
-            
+            <p style = "text-align: left; margin-left: 30%;" data-state = "score"> Your final score is </p>
+            <p style = "text-align: left; margin-left: 30%; display: inline-block"> Enter initial: <input id="name"/></p>
+            <button class = "button button-submit" >Submit</button> 
         </question>
     </div> 
+    <result style = "display: none;">
+        <h1>High Score</h1>
+        <ol id = "list"></ol>
+        <button class = "button button-back" >Go Back</button>
+        <button class = "button button-clear">Clear Highscore</button>
+    </result>
     <script src="./Assets/script.js"></script>
   </body>
 </html>
