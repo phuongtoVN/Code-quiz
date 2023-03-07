@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code quiz</title>
+    <link rel="stylesheet" href="Assets/style.css" />
+  </head>
+  <body>
+    <div class="first-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <button class="button button-start">Start Quiz</button>
+    </div>
+    
+    <div class="quiz" style="display:none;">
+        <question style="display:none;">
+            <h1>Commonly used data types DO NOT include:</h1>
+            <ol>
+                <li class = "button button-answer" data-state = "wrong">1.Strings</li>
+                <li class = "button button-answer" data-state = "wrong">2.Boolean</li>
+                <li class = "button button-answer" data-state = "correct">3.Alerts</li>
+                <li class = "button button-answer" data-state = "wrong">4.Numbers</li>
+            </ol>
+        </question>
+        <question style="display:none;">
+            <h1>The condition in an if/else statement is enclosed within ____.</h1>
+            <ol>
+                <li class = "button button-answer" data-state = "wrong">1.Quote</li>
+                <li class = "button button-answer" data-state = "wrong">2.Curly brackets</li>
+                <li class = "button button-answer" data-state = "correct">3.Parentheses</li>
+                <li class = "button button-answer" data-state = "wrong">4.square brackets</li>
+            </ol>
+        </question>
+        <question style="display:none;">
+            <h1>arrays in JaveScript can be used to store ____.</h1>
+            <ol>
+                <li class = "button button-answer" data-state = "wrong">1.Numbers and strings</li>
+                <li class = "button button-answer" data-state = "wrong">2.Other arrays</li>
+                <li class = "button button-answer" data-state = "wrong">3.Booleans</li>
+                <li class = "button button-answer" data-state = "correct">4.All of the above</li>
+            </ol>
+        </question>
+        <question style="display:none;">
+            <h1>A very useful tool used during development and debuging for printing content to the debugger is:</h1>
+            <ol>
+                <li class = "button button-answer" data-state = "wrong">1.JavaScript</li>
+                <li class = "button button-answer" data-state = "wrong">2.Terminal/bash</li>
+                <li class = "button button-answer" data-state = "wrong">3.For loops</li>
+                <li class = "button button-answer" data-state = "correct">4.Console.log</li>
+            </ol>
+        </question>
+        <question style="display:none;">
+            <h1>All done!</h1>
+            <p style="text-align: left; margin-left: 30%;"> Your final score is </p>
+            <p style="text-align: left; margin-left: 30%;"> Enter initial: <input id="name"/></p>
+            
+        </question>
+    </div> 
+    <script src="./Assets/script.js"></script>
+  </body>
+</html>
