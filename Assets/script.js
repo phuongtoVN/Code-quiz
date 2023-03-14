@@ -36,11 +36,12 @@ function changeQuestion(index) {
             return;
         }
     }
-
+    console.log(nextQuestion[index]);
 }
 
 start.addEventListener("click", function(){
-    firstPage.classList.toggle("hide");
+    //firstPage.classList.toggle("hide");
+    firstPage.style.display = "none";
     setTime(0);
     if (quizz.style.display === "none") {
         quizz.style.display = "block";
@@ -62,7 +63,7 @@ function setTime(x) {
   }
 
 
-// the questions are: child[i] i = 1, 3, 5, 7
+// the questions are: child[i] i = 1, 3, 5, 7, 9
 
 function play(index){
     if (index > 9) {
@@ -83,6 +84,8 @@ function play(index){
                 notification.textContent = "Correct!";
             }
             nextQuestion[index+2].appendChild(notification);
+            if (index>1) nextQuestion[index].lastElementChild.remove();
+            console.log(nextQuestion[index].lastElementChild);
         }
         play(index+2);
     })
@@ -142,14 +145,34 @@ submitButton.addEventListener("click", function(event) {
 })
 ;
 
+function setDefault(){
+    document.querySelector('result').style.display = "none";
+    quizz.style.display = "none";
+    
+    score = 0;
+    timeLeft = 76;
+}
 
 const backButton = document.querySelector(".button-back");
-const clearButton = document.querySelector("button-clear");
+const clearButton = document.querySelector(".button-clear");
 
 //When [Go Back] button is clicked, go back to "first-page"
 backButton.addEventListener("click", function(event){
     event.preventDefault();
-    document.querySelector('result').style.display = "none";
-    firstPage.classList.toggle("appear");
-
+    setDefault();
+    firstPage.style.display = "block";
+  /*  nextQuestion.forEach(function(each) {
+        each.style.display = "none";
+    });*/
 })
+
+
+
+clearButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    while (olEl.firstChild) {
+        olEl.removeChild(olEl.firstChild);
+      }
+    console.log(olEl);
+    clearButton.style.display = "none";
+});
